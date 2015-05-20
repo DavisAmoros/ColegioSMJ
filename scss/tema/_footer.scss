@@ -1,0 +1,11 @@
+.footer{
+	background: $gris-oscuro;
+	font-size: 14px;
+	text-align: center;
+	&__by{
+		color: $gris-claro;
+		margin-top: 1em;
+		margin-bottom: 0px;
+		padding: 1em;
+	}
+}

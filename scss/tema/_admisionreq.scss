@@ -1,0 +1,52 @@
+.req-admision{
+	padding: 2rem;
+	font-size: 0px;
+	text-align: center;
+	margin: 0 auto;
+	
+
+	&__h2{
+		color: $verde-oscuro;
+		font-weight: 700;
+		margin: 0 0 2rem 0;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	
+	&__container{
+		display: inline-block;
+		@include desde(tablet){
+			margin: 1rem;
+		}
+	}
+
+	&__h3{
+		color: $verde-claro;
+		font-size: 1rem;
+		font-weight: 900;
+		margin: 0px;
+		text-align: left;
+	}
+
+	&__lista{
+		color: $gris-claro;
+		font-size: .8rem;
+		list-style: none;
+		margin: 0 0 2rem 0;
+		padding: 0px;
+		text-align: left;		
+	}
+
+	&__descargar{
+		color: $verde-claro;
+		font-size: 1rem;
+		span{
+			color: $verde-oscuro;
+			font-weight: 900;
+			text-align: right;
+			&:hover{
+				color: $gris-oscuro;
+			}
+		}
+	}
+}

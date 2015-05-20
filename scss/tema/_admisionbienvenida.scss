@@ -1,0 +1,70 @@
+.bienv-admision{
+	background-color: $verde-oscuro;
+
+	&__h2{		
+		color: white;
+		background: $verde-claro;
+		font-size: 1.2em;
+		padding: 1.5em;
+		text-align: center;
+		margin: 0px;
+	}
+	
+	&__container-adm{
+		background-color: $verde-oscuro;
+		position: relative; 
+		z-index: 1;
+		padding: 0 5%;
+		@include desde(tablet){
+			padding: 0 10%;
+		}
+ 		@include desde(web){
+ 			max-width: 800px;
+ 			margin: 0 auto;
+ 		}
+	}
+
+	&__texto{
+		color: white;
+		font-size: .75rem;			
+		padding: 2em;
+		position: relative; //se necesita esto para que funcione los z-index y la img se vaya atrás.
+		z-index: 3;
+		
+		span{
+			font-weight: 700;			
+		}		
+		@include desde(tablet){
+			padding: 2em 0;
+			max-width: 70%;
+		}
+		@include desde(web){
+			max-width: 500px;			
+		}
+	}
+
+	&__containerfig{		
+		&__img{
+			bottom: 0px;
+			margin: 0px;
+			opacity: .1;
+			padding: 0px;
+			position: absolute;
+			right: 0px;
+			z-index: 2;
+			@include desde(475px){
+				max-height: 96%;				
+			}
+			@include desde(tablet){
+				max-height: 110%;
+				opacity: 1;
+				right: 10%;
+			}
+			
+			@include desde(web){
+				opacity: 1;
+				max-height: 120%;
+			}
+		}
+	}
+}

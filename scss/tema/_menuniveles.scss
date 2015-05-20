@@ -1,0 +1,59 @@
+.nav-nivel{
+	text-align: center;
+	background-color: $verde-claro;
+	padding: 5em 4em 4em 4em;
+	&__h2{
+		color: white;
+		font-weight: 700;
+		padding: 0 0 1.5em 0;
+		margin: 0divpx;
+	}
+	
+
+	&__container{
+		margin-bottom: 2em;
+		@include desde(tablet){
+			display: inline-block;
+			padding: 0 4em;
+		}
+		
+/*		&__boton{
+			&:hover{
+				color: red;
+				background-color: yellow;
+			}
+		}*/
+
+		&__h3{
+			line-height: 1;
+			color: white;
+			font-weight: 400;
+			font-size: 1.2em;
+			margin: 0px;
+			padding: 0px;
+			vertical-align: top;
+			&:hover{
+				color: $verde-oscuro;
+			}
+
+			@include desde(web){
+				display: inline-block;
+				padding: 2em .8em;
+			}
+		}
+
+		.icon-primaria, .icon-secundaria{
+			font-size: 6.25em;
+			margin-bottom: .2em;
+			display: block;
+			color: white;
+			&:hover{
+				color: $verde-oscuro;
+			}
+			@include desde(web){
+				display: inline-block;
+			}			
+		}
+	}	
+}
+

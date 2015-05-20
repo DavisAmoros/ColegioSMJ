@@ -1,0 +1,173 @@
+
+.header{
+	//background-image: url("../img/fondo-sin-logo.jpg");
+	background: $verde-claro;
+	background-size: cover;
+	background-position: center center;
+	font-size: 14px;
+	height: 418px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	text-align: center;
+	
+//Mostrar Menu
+	&__mostrar-menu{		
+		background-color: rgba($verde-oscuro, .8);
+		left: 0px;
+		position: fixed;
+		text-align: left;			
+		top: 0px;
+		width: 100%;	
+		z-index: 100000;
+		
+		@include desde(tablet){
+			display: none;
+		}
+	}
+
+	.icon-menu{
+		color: white;
+		padding: 1em;
+		font-size: 1.2em;
+		@include desde(tablet){
+			display: none;
+		}
+
+	}
+
+
+//Cerrar Menu
+	&__cerrar-menu{		
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		z-index: 101;
+		background-color: rgba($verde-oscuro, .8);
+		width: 100%;	
+		text-align: left;		
+		
+		@include desde(tablet){
+			display: none;
+		}
+	}
+
+	.icon-cerrar{
+		color: white;
+		padding: 1em;
+		font-size: 1.2em;
+		@include desde(tablet){
+			display: none;
+		}
+
+	}
+
+//////////////////////////////////
+
+
+	&__nav, &__redes{
+		//display: none;
+		@include desde(tablet){
+			display: inline-block;
+		}
+	}
+
+	&__nav__list {
+		a{
+			color: white;
+		}
+		
+		@include hasta(tablet){
+			list-style: none;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			background-color: $verde-oscuro;
+			color: white;
+			z-index: 100;
+			display: none;
+			
+			position: fixed;
+			top: 3.6em;
+			&__item{
+				line-height: 4em;
+				&:hover{
+					color: $verde-claro;
+					font-weight: 900;
+				}
+			}		
+		}
+
+		@include desde(tablet){
+			display: inline-block;
+			background: none;
+			color: white;
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			text-shadow: black 0.1em 0.1em 0.2em;
+			&__item{
+			display: inline-block;
+			padding: 1.2em 2em 0 0;
+			}
+		}
+	}
+
+	&__redes{
+		display: none;
+		cursor: pointer;
+		a{
+			color: white;			
+		}
+
+		li{
+			display: inline-block;
+		}
+
+		@include desde(tablet){
+			display: inline-block;
+			color: white;
+			font-size: 1.5em;
+			list-style: none;
+			margin: 0px;
+			padding-left: 2em;
+			text-shadow: black 0.05em 0.05em 0.15em;
+			.icon-facebook, .icon-twitter, .icon-youtube{
+				display: inline-block;
+				padding: 0 0 0 .8em;
+			}			
+		}
+	}
+
+	&__logo{
+		margin: 0px;
+		padding-top: 11em;
+		drop-shadow: rgba(0,0,0,.5) 2px 2px 10px 4px;		
+		@include desde(tablet){
+			padding-top: 8em;
+		}
+		&__img{
+			width: 80%;
+			max-width: 350px;
+		}
+	}
+
+	&__containerh1{
+		position: absolute;
+		bottom: 0px;
+		background-color: rgba($verde-oscuro, 0.85);
+		width: 100%;
+		max-height: 40px;
+
+		&__h1{
+			color: white;
+			font-size: 1.2em;
+			margin: 0px;
+			padding: .5em 0;
+			span{
+				color: $verde-claro;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,65 @@
+// Font face. Incluya el import de Google Fonts o su regla font-face
+// Lo usual es una fuente para los textos y otra para los títulos
+	@import url(http://fonts.googleapis.com/css?family=Tienne:400,700,900);
+	
+//Modifique los estilos base desde las variables
+	body {
+		background  : $body--background;
+		font-family : $body--font-family !important;
+		color       : $body--color;
+	}
+
+	a {
+		color           : $link--color;
+		text-decoration : none;
+
+		&:hover {
+			color : darken($link--color,10%);
+		}
+	}
+
+	p, blockquote, li {
+		font-size   : $p--font-size;
+		line-height : $p--line-height;
+	}
+
+	p {
+		margin : 0 0 $p--margin 0;
+	}
+
+	blockquote {
+
+	}
+
+// Estilos básicos de los encabezados
+	h1, h2, h3, h4, h5, h6 {
+		font-family    : $header--font-family;
+		font-weight    : $header--font-weight;
+		text-transform : $header--text-transform; 
+		color          : $header--color;
+	}
+
+// Tamaños y estilos de los encabezados:
+	h1 { 
+		font-size : $h1--font-size; 
+	}
+
+	h2 { 
+		font-size : $h2--font-size; 
+	}
+
+	h3 { 
+		font-size : $h3--font-size; 
+	}
+
+	h4 { 
+		font-size : $h4--font-size; 
+	}
+
+	h5 { 
+		font-size : $h5--font-size; 
+	}
+
+	h6 { 
+		font-size : $h6--font-size;
+	}

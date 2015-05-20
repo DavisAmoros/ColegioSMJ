@@ -1,0 +1,144 @@
+.info-nivel{
+	text-align: center;
+	margin: 2em 10% 2em 10%;
+	@include desde(tablet){
+		margin: 2em 15% 2em 15%;
+	}
+	
+	&__h2{
+		color: $verde-claro;
+		font-size: 1.5em;
+		span{
+			color: $verde-oscuro;
+		}
+	}
+	
+	&__container-art{
+		position: relative;
+		margin-bottom: 4em;
+		@include desde(web){
+			max-width: 724px;
+			margin: 0 auto 4em auto;
+		}
+		@include desde(tablet){
+			-webkit-transform:translateX(50px);
+			-moz-transform:translateX(50px);
+			
+		}
+	}
+
+	&__nino-pri{
+		display: none;
+		@include desde(tablet){
+			display: block;
+			position: absolute;
+			left: -113px;
+			top: -30px;
+			z-index: 100;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		&__img{
+			@include desde(793px){
+				max-height: 422px;
+			}
+			@include desde(933px){
+				max-height: 400px;
+			}
+			@include desde(1021px){
+				max-height: 380px;
+			}
+		}
+	}
+
+	&__nino-sec{
+		display: none;
+		@include desde(tablet){
+			display: block;
+			position: absolute;
+			left: -100px;
+			top: -30px;
+			z-index: 100;
+			margin: 0px;
+			padding: 0px;						
+		}
+		@include desde(939px){
+			left: -90px;
+		}
+
+		@include desde(961px){
+			left: -82px;			
+		}
+
+		@include desde(1013px){
+			left: -78px;			
+		}
+
+		&__img{
+			@include desde(796px){
+			max-height: 520px;
+			}
+
+			@include desde(939px){
+			max-height: 490px;
+			}
+
+			@include desde(961px){
+			max-height: 470px;
+			}
+
+			@include desde(1013px){
+			max-height: 450px;
+			}
+		}
+
+		
+	}
+
+	&__lista-pri, &__lista-sec{
+		padding: 0px;
+		color: white;
+		@include desde(web){
+			max-width: 724px;
+			margin: 0 auto;
+		}
+
+		&__item{
+			font-size: .8em;
+			list-style: none;
+			text-align: left;
+			padding: 1.5em;
+			@include desde(tablet){
+				padding: 1.5em 1.5em 1.5em 6.2em;
+			}
+		}		
+	}
+}
+
+
+.azul-oscuro{
+	background-color: #4674B2;
+}	
+.azul-claro{
+	background-color: #00A5E5;
+}
+.anaranjado{
+	background-color: #D98B2F;
+}
+.anaranjado-oscuro{
+	background-color: #C84239;
+}
+.verde-amarillo{
+	background-color: #D1D73F;
+}
+.verde-claro{
+	background-color: #4FA355;
+}
+.verde-oscuro{
+	background-color: #386037;  
+}
+.morado{
+	background-color: #812461;
+}
+

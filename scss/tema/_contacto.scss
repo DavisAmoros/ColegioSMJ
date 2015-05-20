@@ -1,0 +1,103 @@
+.contacto{
+	background: white;
+	font-size: 14px;
+	text-align: center;
+	&__h2{
+		background-color: $gris-claro;
+		color: white;
+		font-size: 2em;
+		margin: 0px;
+		padding: 2em;
+		text-align: center;
+	}
+
+	&__container-datos{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__titulo, &__datos, &__redes{
+		color: $gris-claro;	
+	}
+
+	&__titulo{
+		font-weight: 700;
+		padding: 1em 2.5em;			
+		margin: 1em 0;
+		text-align: center;
+
+		@include desde(tablet){
+			padding: 0px;
+			margin: 0px;
+			text-align: left;
+		}
+
+	}
+
+	&__datos{
+		list-style: none;
+		margin: 1em 2em;
+		border-collapse: separate;		
+		border-spacing: .5em;
+		text-align: left;
+		&__subtitulo{
+			font-weight: 700;
+			vertical-align: top;
+		}
+	}
+
+	&__redes{
+		a{
+			color: $gris-claro;
+		}
+
+		padding: 0px;
+		text-align: center;
+		&__item{
+		display: inline-block;
+		font-size: 2em;
+		padding: .5em ;
+		}
+	}
+
+
+
+
+	.formulario{
+		text-align: center;		
+		@include desde(tablet){
+			width: 70%;
+			display: inline-block;
+		}
+		@include desde(web){
+			margin-top: 2em;
+			max-width: 400px;
+		}
+
+		&__cajas{
+			width: 90%;
+			margin-bottom: 1em;
+			padding-left: 1em;
+			background-color: #EAEBEB;
+			border: none;
+			border-radius: 5px;
+		}
+
+		input{
+			height: 3em;
+		}
+
+		textarea{
+			height: 10em;
+			padding-top: 15px;
+		}
+
+		button{
+			background: $verde-claro;
+			border: 0px;
+			height: 3em;
+			width: 6em;
+			color: #fff;
+		}
+	}
+}

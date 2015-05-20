@@ -1,0 +1,112 @@
+.colegio{
+	margin: 0 5%;
+	padding-bottom: 2rem;
+	text-align: justify;
+	font-size: 0px; 
+
+	@include desde(tablet){
+		margin: 0 10%;
+	}
+
+	@include desde(web){
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	&__h2{
+		color: $verde-claro;
+		font-size: 1.5rem;
+		margin: 2rem 0;
+		text-align: center;
+		span{
+			color: $verde-oscuro;
+		}
+	}
+
+	&__nosotros, &__mision, &__vision, &__valores{
+
+		&__h3{
+			color: $verde-claro;
+			font-size: 1.2rem;
+		}
+
+		&__texto{
+			color: $gris-claro;
+			font-size: .8rem;
+		}	
+	}
+
+	&__mision, &__vision{
+		@include desde(tablet){
+			display: inline-block;
+			width: 44%; // no consideras el 10% del margin del .colegio(desde tablet)
+			vertical-align: top;
+		}
+	}
+
+	&__mision{
+		@include desde(tablet){
+			margin-right: 10%;
+		}
+	}
+
+	&__lista1, &__lista2{
+		color: $gris-claro;
+		font-size: .8rem;
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		margin-left: 2rem;
+		@include desde(tablet){
+			display: inline-block;
+		}
+
+		&__item{
+			padding: 0px;
+			list-style-image: url("../img/circuloverde.png")		
+		}
+	}		
+
+
+
+/*
+	&__h3{
+		color: $verde-claro;
+		font-size: 1.2em;
+	}
+
+	&__nosotros, &__mision, &__vision, &__valores{
+		color: $gris-claro;
+		font-size: 1em;
+	}
+
+
+
+
+	&__mision, &__vision{
+		@include desde(tablet){
+			display: inline-block;
+			width: 40%;
+		}
+	}
+	&__lista1, &__lista2{
+		color: $gris-claro;
+		font-size: 1em;
+		list-style: none;
+		margin: 0px;
+		&__item{
+			&:before{
+				background-color: $verde-claro;
+				border-radius: 50%;
+				content: "";
+				height: 6px;
+				left: 2.5em;
+				margin-top: .5em;
+				position: absolute;
+				width: 6px;
+			}
+		}
+	}
+*/
+}
+

@@ -1,0 +1,69 @@
+.bloque{
+	font-size: 14px;
+	text-align: center;
+	
+
+	&__h2{
+		color: $verde-claro;
+		font-size: 1.5em;
+		margin: 2em 0;
+		span{
+			color: $verde-oscuro
+		}
+	}
+
+	&__1, &__2, &__3{
+
+		background-color: white;
+		color: $gris-claro;
+		display: inline-block;
+		margin: 0 10px 20px 10px;
+		max-width: 245px;
+		padding: 1em;
+		position: relative;
+		text-align: left;
+		vertical-align: top;
+
+		-webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.47);
+		-moz-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.47);
+		box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.47);
+		@include desde(tablet){
+			margin: 0 10px 20px 10px;
+		}
+		@include desde(web){
+			min-height: 190px;
+		}
+
+		&__containerfig{
+			margin: 0px;
+			&__titulo{
+				color: $verde-claro;
+				font-size: 1.2em;				
+				font-weight: 700;
+				margin: .4em 0;
+			}
+		}
+
+	}
+
+	&__1__texto{
+		font-size: .8em;
+		margin-bottom: 2em;
+		max-width: 262px;
+		word-wrap: break-word;
+
+	}
+
+	&__ver-mas{
+		color: $gris-claro;
+		font-size: .8em;
+		margin: 0px;
+		
+		position: absolute;
+		right: .7em;
+		bottom: .5em;
+		&:hover{
+			color: $verde-claro;
+		}
+	}
+}
