@@ -47,6 +47,7 @@
 	}
 
 	&__redes{
+		display: none; // solo para ocultar temporalmente
 		a{
 			color: $gris-claro;
 		}
