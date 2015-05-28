@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>SMJ</title>
 	<meta charset="utf-8"/>
-	<meta name="Description" content="Colegio Santa María y José, somos una institución educativa privada encargada de brindar el más alto nivel de enseñanza en primaria y secundaria."/>
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
-
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1"/>
 	<link rel="stylesheet" href="css/estilos.css"/>
 	<link href="css/lightbox.css" rel="stylesheet" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
-	<script src="js/scripts.js"></script>
 
 </head>
 <body>
@@ -85,7 +82,7 @@
 				<figcaption class="bloque__3__containerfig__titulo">CALENDARIO ACADÉMICO</figcaption>
 			</figure>
 			<P class="bloque__1__texto">Aquí encontrarás todo lo relacionado a las actividades que tenemos preparadas a lo largo del año escolar.</P>
-			<a class="bloque__ver-mas" href="#">DESCARGAR</a>
+			<a class="bloque__ver-mas" href="descargas/CALENDARIZACION-2015.xlsx">DESCARGAR</a>
 		</article>
 	</section>	
 	
@@ -139,17 +136,21 @@
 		<h2 class="nav-nivel__h2">NIVELES</h2>
 		
 		<div class="nav-nivel__container">
+			
 			<a class="nav-nivel__container__boton" href="#js-primaria">
 				<span class="icon-primaria"></span>
 				<h3 class="nav-nivel__container__h3">Prima</h3>	
 			</a>
+			
 		</div>
 
 		<div class="nav-nivel__container">
+			
 			<a class="nav-nivel__container__boton" href="#js-secundaria">
 				<span class="icon-secundaria"></span>
 				<h3 class="nav-nivel__container__h3">Secundaria</h3>				
-			</a>
+			</a>			
+			
 		</div>
 
 	</section>
@@ -271,10 +272,10 @@
 			</ul>			
 		</div>
 
-		<p class="req-admision__descargar">DESCARGAR FICHA DE INSCRIPCIÓN <a href=""><span>AQUÍ</span></a></p>
+		<p class="req-admision__descargar">DESCARGAR FICHA DE INSCRIPCIÓN <a href="descargas/FICHA-DE-INSCRIPCION-2015.docx"><span>AQUÍ</span></a></p>
 	</section>
 
-<!--Secccion 7: Galería-->	
+<!--Secccion 7: Galería-->
 	<section class="galeria" id="js-galeria">
 		<h2 class="galeria__h2">GALERÍA</h2>
 		
@@ -347,16 +348,16 @@
 
 			<table class="contacto__datos">
 				<tr>
-					<td colspan="2" class="contacto__titulo">Atención al público:</td>	
+					<td colspan="2" class="contacto__titulo">ATENCIÓN AL PÚBLICO:</td>	
 				</tr>
 
 				<tr>
-					<td class="contacto__datos__subtitulo">Horario:</td>
+					<td class="contacto__datos__subtitulo">HORARIO:</td>
 					<td>Lunes a Viernes de 7:00 am a 2:00 pm.</td>
 				</tr>
 
 				<tr>
-					<td class="contacto__datos__subtitulo">Dirección:</td>
+					<td class="contacto__datos__subtitulo">DIRECCIÓN:</td>
 					<td>Av. Mansiche 1124 - 1130 Urb. Santa Inés.</br> Trujillo La libertad – PERÚ</td>
 				</tr>
 				
@@ -385,7 +386,7 @@
 			</ul>			
 		</div>
 		
-		<form class="formulario" action="//formspree.io/alex_14@hotmail.com" method="POST">
+		<form class="formulario" action="//formspree.io/alex_14_7@hotmail.com" method="POST">
 			<input class="formulario__cajas" type="text" name="name" id="name" placeholder="Nombre y Apellido"/>
 			<input class="formulario__cajas" type="email" name="_replyto" id="email" placeholder="Correo Electrónico"/>
 			<textarea class="formulario__cajas area" name="message" placeholder="Mensaje"></textarea>
@@ -398,7 +399,7 @@
 		<p class="footer__by">Design by ALVARO. All copy rights reserved.</p>
 	</footer>
 
-<!--Scripts-->		
+<!--Scripts-->
 	<script>
 		$( ".header__cerrar-menu" ).hide();
 
@@ -429,10 +430,24 @@
 		});		
 	</script>
 
+	<script>
+		$(document).on("ready", main);
 
+			function main(){
+				$(".header__nav a").on("click", irA);
+				$(".bloque a").on("click", irA);
+				$(".nav-nivel a").on("click", irA);
+			}
 
+			function irA(){
+				var seccion = $(this).attr("href");
+				$("body, html").animate({
+					scrollTop: $(seccion).offset().top
+				}, 800);
 
-
+				return false;
+			}
+	</script>
 
 </body>
 </html>
