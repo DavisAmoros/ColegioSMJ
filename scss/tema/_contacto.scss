@@ -2,6 +2,11 @@
 	background: white;
 	font-size: 14px;
 	text-align: center;
+	
+	.mapa{
+		width: 90%;
+	}
+
 	&__h2{
 		background-color: $gris-claro;
 		color: white;
@@ -101,8 +106,4 @@
 			color: #fff;
 		}
 	}
-}
-
-iframe{
-	width: 90%;
 }
